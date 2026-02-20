@@ -34,7 +34,7 @@ const userbotClient = new TelegramClient(
 );
 
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-const geminiModel = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+const geminiModel = genAI.getGenerativeModel({ model: 'gemini-3-flash-preview' });
 
 const REPLY_SUFFIX = 'Bu men emasman, AI. Hozir bandman.';
 const MIN_REPLY_DELAY_MS = 2000;
@@ -280,3 +280,24 @@ startUserbot().catch((error) => {
   log(`Fatal error: ${error?.message || error}`);
   process.exit(1);
 });
+
+
+
+
+import express from "express";
+
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Bot is running 🚀");
+});
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`🌐 Server running on port ${PORT}`);
+});
+
+setInterval(() => {
+  console.log("🟢 Alive ping");
+}, 60000);
