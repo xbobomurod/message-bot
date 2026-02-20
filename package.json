@@ -1,0 +1,17 @@
+{
+  "name": "telegram-userbot-gemini-autoreply",
+  "version": "1.0.0",
+  "description": "Telegram userbot with Gemini auto-reply and optional control bot",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "dotenv": "^16.4.5",
+    "input": "^1.0.1",
+    "node-telegram-bot-api": "^0.66.0",
+    "telegram": "^2.26.8"
+  }
+}
