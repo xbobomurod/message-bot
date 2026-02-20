@@ -1,0 +1,16 @@
+{
+  "name": "telegram-userbot-openai-autoreply",
+  "version": "1.0.0",
+  "description": "Telegram userbot with GramJS + OpenAI auto-reply for private chats",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "input": "^1.0.1",
+    "openai": "^4.58.1",
+    "telegram": "^2.26.8"
+  }
+}
